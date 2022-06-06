@@ -1,14 +1,17 @@
 {
-  "name": "@lit/lit-starter-ts",
-  "private": true,
-  "version": "1.0.4",
-  "description": "A simple web component",
+  "name": "@jshsj/timer",
+  "homepage": "https://github.com/JSHSJ/jshsj-timer",
+  "private": false,
+  "version": "0.0.1",
+  "description": "A tiny interval timer",
   "main": "jshsj-timer.js",
   "module": "jshsj-timer.js",
+  "types": "jshsj-timer.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc --watch",
+    "build:prod": "tsc --project tsconfig.build.json",
     "clean": "rimraf jshsj-timer.{d.ts,d.ts.map,js,js.map} test/jshsj-timer.{d.ts,d.ts.map,js,js.map} test/jshsj-timer_test.{d.ts,d.ts.map,js,js.map}",
     "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",
@@ -30,7 +33,8 @@
     "test:watch": "wtr --watch",
     "test:prod": "MODE=prod wtr",
     "test:prod:watch": "MODE=prod wtr --watch",
-    "checksize": "rollup -c ; cat jshsj-timer.bundled.js | gzip -9 | wc -c ; rm jshsj-timer.bundled.js"
+    "checksize": "rollup -c ; cat jshsj-timer.bundled.js | gzip -9 | wc -c ; rm jshsj-timer.bundled.js",
+    "prebublish": "npm run clean && npm run build:prod"
   },
   "keywords": [
     "web-components",
@@ -38,8 +42,8 @@
     "typescript",
     "lit"
   ],
-  "author": "Google LLC",
-  "license": "BSD-3-Clause",
+  "author": "@JSHSJ",
+  "license": "MIT",
   "dependencies": {
     "lit": "^2.2.4"
   },

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./",
+    "rootDir": "./src",
+    "target": "es2019",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": [
+      "es2019",
+      "dom"
+    ],
+    "declaration": true,
+    "declarationMap": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "allowSyntheticDefaultImports": true,
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": []
+}
