@@ -3,9 +3,9 @@
 /test/
 custom-elements.json
 # top level source
-my-element.js
-my-element.js.map
-my-element.d.ts
-my-element.d.ts.map
+jshsj-timer.js
+jshsj-timer.js.map
+jshsj-timer.d.ts
+jshsj-timer.d.ts.map
 # only generated for size check
-my-element.bundled.js
+jshsj-timer.bundled.js
